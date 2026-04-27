@@ -1,0 +1,34 @@
+﻿name: CI Séance 2
+
+on:
+  push:
+    branches: [main, principal]
+  pull_request:
+    branches: [main, principal]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+      - run: pip install ruff
+      - run: ruff check .
+
+  tests:
+    needs: lint
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.10", "3.11"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - run: pip install pytest
+      - run: pytest
