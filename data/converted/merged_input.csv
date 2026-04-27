@@ -1,0 +1,51 @@
+anime_id,name,genres,type,episodes,rating,members,year,studio,status,source_file,source_format,genre
+50265,Spy x Family,"Action, Comedy, Slice of Life, Shounen",TV,25,8.61,620450,2022,Wit Studio,Completed,anime_3.xml,xml,
+51009,Jujutsu Kaisen Season 2,"Action, Fantasy, Shounen, Supernatural",TV,23,8.82,534200,2023,MAPPA,Completed,anime_3.xml,xml,
+52991,Sousou no Frieren,"Adventure, Drama, Fantasy, Seinen",TV,28,9.15,489300,2023,Madhouse,Completed,anime_3.xml,xml,
+51179,Chainsaw Man,"Action, Fantasy, Shounen, Supernatural",TV,12,8.54,712800,2022,MAPPA,Completed,anime_3.xml,xml,
+49387,Vinland Saga Season 2,"Action, Adventure, Drama, Historical, Seinen",TV,24,8.72,310500,2023,MAPPA,Completed,anime_3.xml,xml,
+53887,Solo Leveling,"Action, Adventure, Fantasy",TV,12,8.21,405600,2024,A-1 Pictures,Completed,anime_3.xml,xml,
+55701,Oshi no Ko Season 2,"Drama, Supernatural, Seinen",TV,13,8.05,298700,2024,Doga Kobo,Completed,anime_3.xml,xml,
+52034,Dandadan,"Action, Comedy, Romance, Sci-Fi, Supernatural",TV,12,8.67,275400,2024,Science SARU,Completed,anime_3.xml,xml,
+54492,Kaiju No. 8,"Action, Sci-Fi, Shounen",TV,12,7.92,312000,2024,Production I.G,Completed,anime_3.xml,xml,
+48583,Shingeki no Kyojin: The Final Season Part 3,"Action, Drama, Fantasy, Military, Shounen",TV,7,8.88,456700,2023,MAPPA,Completed,anime_3.xml,xml,
+50709,Oshi no Ko,"Drama, Supernatural, Seinen",TV,11,8.45,502300,2023,Doga Kobo,Completed,anime_3.xml,xml,
+51535,Bocchi the Rock!,"Comedy, Music, Slice of Life",TV,12,8.82,289400,2022,CloverWorks,Completed,anime_3.xml,xml,
+49918,Mob Psycho 100 III,"Action, Comedy, Slice of Life, Supernatural",TV,12,8.79,267100,2022,Bones,Completed,anime_3.xml,xml,
+44511,Cyberpunk: Edgerunners,"Action, Sci-Fi",ONA,10,8.6,398500,2022,Trigger,Completed,anime_3.xml,xml,
+53446,Mushoku Tensei II,"Adventure, Drama, Fantasy, Ecchi",TV,25,8.41,305200,2023,Studio Bind,Completed,anime_3.xml,xml,
+55190,Sakamoto Days,"Action, Comedy, Shounen",TV,11,8.35,198700,2025,TMS Entertainment,Airing,anime_3.xml,xml,
+52299,Blue Lock,"Shounen, Sports",TV,24,8.09,378900,2022,8bit,Completed,anime_3.xml,xml,
+50602,Demon Slayer: Swordsmith Village Arc,"Action, Fantasy, Shounen, Supernatural",TV,11,8.17,425600,2023,ufotable,Completed,anime_3.xml,xml,
+53998,Tengoku Daimakyou,"Adventure, Mystery, Sci-Fi, Seinen",TV,13,8.36,187600,2023,Production I.G,Completed,anime_3.xml,xml,
+54856,Wind Breaker,"Action, Shounen",TV,13,7.85,156300,2024,CloverWorks,Completed,anime_3.xml,xml,
+52701,Kagurabachi,"Action, Fantasy, Shounen",TV,12,7.78,145200,2025,Bones,Airing,anime_3.xml,xml,
+56102,Lazarus,"Action, Sci-Fi",TV,13,8.12,112400,2025,MAPPA,Airing,anime_3.xml,xml,
+48569,Tokyo Revengers: Tenjiku-hen,"Action, Drama, Shounen, Supernatural",TV,13,7.45,234100,2023,LIDENFILMS,Completed,anime_3.xml,xml,
+49190,Summer Time Rendering,"Mystery, Supernatural, Thriller",TV,25,8.52,265800,2022,OLM,Completed,anime_3.xml,xml,
+54112,Undead Unluck,"Action, Comedy, Fantasy, Shounen",TV,24,7.65,132500,2023,David Production,Completed,anime_3.xml,xml,
+50265,Spy x Family,,TV,25,8.61,620450,2022,Wit Studio,,anime_2.json,json,"Action, Comedy, Slice of Life, Shounen"
+51009,Jujutsu Kaisen Season 2,,TV,23,8.82,534200,2023,MAPPA,,anime_2.json,json,"Action, Fantasy, Shounen, Supernatural"
+52991,Sousou no Frieren,,TV,28,9.15,489300,2023,Madhouse,,anime_2.json,json,"Adventure, Drama, Fantasy, Seinen"
+51179,Chainsaw Man,,TV,12,8.54,712800,2022,MAPPA,,anime_2.json,json,"Action, Fantasy, Shounen, Supernatural"
+49387,Vinland Saga Season 2,,TV,24,8.72,310500,2023,MAPPA,,anime_2.json,json,"Action, Adventure, Drama, Historical, Seinen"
+53887,Solo Leveling,,TV,12,8.21,405600,2024,A-1 Pictures,,anime_2.json,json,"Action, Adventure, Fantasy"
+55701,Oshi no Ko Season 2,,TV,13,8.05,298700,2024,Doga Kobo,,anime_2.json,json,"Drama, Supernatural, Seinen"
+52034,Dandadan,,TV,12,8.67,275400,2024,Science SARU,,anime_2.json,json,"Action, Comedy, Romance, Sci-Fi, Supernatural"
+54492,Kaiju No. 8,,TV,12,7.92,312000,2024,Production I.G,,anime_2.json,json,"Action, Sci-Fi, Shounen"
+48583,Shingeki no Kyojin: The Final Season Part 3,,TV,7,8.88,456700,2023,MAPPA,,anime_2.json,json,"Action, Drama, Fantasy, Military, Shounen"
+50709,Oshi no Ko,,TV,11,8.45,502300,2023,Doga Kobo,,anime_2.json,json,"Drama, Supernatural, Seinen"
+51535,Bocchi the Rock!,,TV,12,8.82,289400,2022,CloverWorks,,anime_2.json,json,"Comedy, Music, Slice of Life"
+49918,Mob Psycho 100 III,,TV,12,8.79,267100,2022,Bones,,anime_2.json,json,"Action, Comedy, Slice of Life, Supernatural"
+44511,Cyberpunk: Edgerunners,,ONA,10,8.6,398500,2022,Trigger,,anime_2.json,json,"Action, Sci-Fi"
+53446,Mushoku Tensei II,,TV,25,8.41,305200,2023,Studio Bind,,anime_2.json,json,"Adventure, Drama, Fantasy, Ecchi"
+55190,Sakamoto Days,,TV,11,8.35,198700,2025,TMS Entertainment,,anime_2.json,json,"Action, Comedy, Shounen"
+52299,Blue Lock,,TV,24,8.09,378900,2022,8bit,,anime_2.json,json,"Shounen, Sports"
+50602,Demon Slayer: Swordsmith Village Arc,,TV,11,8.17,425600,2023,ufotable,,anime_2.json,json,"Action, Fantasy, Shounen, Supernatural"
+53998,Tengoku Daimakyou,,TV,13,8.36,187600,2023,Production I.G,,anime_2.json,json,"Adventure, Mystery, Sci-Fi, Seinen"
+54856,Wind Breaker,,TV,13,7.85,156300,2024,CloverWorks,,anime_2.json,json,"Action, Shounen"
+52701,Kagurabachi,,TV,12,7.78,145200,2025,Bones,,anime_2.json,json,"Action, Fantasy, Shounen"
+56102,Lazarus,,TV,13,8.12,112400,2025,MAPPA,,anime_2.json,json,"Action, Sci-Fi"
+48569,Tokyo Revengers: Tenjiku-hen,,TV,13,7.45,234100,2023,LIDENFILMS,,anime_2.json,json,"Action, Drama, Shounen, Supernatural"
+49190,Summer Time Rendering,,TV,25,8.52,265800,2022,OLM,,anime_2.json,json,"Mystery, Supernatural, Thriller"
+54112,Undead Unluck,,TV,24,7.65,132500,2023,David Production,,anime_2.json,json,"Action, Comedy, Fantasy, Shounen"

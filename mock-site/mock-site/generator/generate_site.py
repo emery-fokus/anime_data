@@ -391,7 +391,7 @@ def generate_robots_txt():
 # ------------------ MAIN ------------------
 
 def main():
-    print(f"🏗️  Génération du mock-site AniData Lab...")
+    print("🏗️  Génération du mock-site AniData Lab...")
     print(f"   Répertoire cible : {SITE_DIR}")
 
     if SITE_DIR.exists():
@@ -410,7 +410,7 @@ def main():
 
     # Stats
     total_pages = sum(1 for _ in SITE_DIR.rglob("*.html"))
-    print(f"✅ Site généré avec succès !")
+    print("✅ Site généré avec succès !")
     print(f"   {len(animes)} animes, {len(NEWS)} actualités")
     print(f"   {total_pages} pages HTML au total")
     print(f"   Généré le : {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")

@@ -258,7 +258,7 @@ def main():
     # Mini rapport
     missing_scores = sum(1 for a in animes if a["score"] is None)
     missing_studios = sum(1 for a in animes if not a["studio"])
-    logger.info(f"\n--- Rapport qualité ---")
+    logger.info("\n--- Rapport qualité ---")
     logger.info(f"Animes avec score manquant : {missing_scores}")
     logger.info(f"Animes avec studio manquant : {missing_studios}")
 

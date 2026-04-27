@@ -1,0 +1,7 @@
+Dépose ici les fichiers source à ingérer par le DAG `anidata_ingest_external_to_pipeline`.
+
+Exemples de chemins à fournir dans le `conf` du DAG :
+- input/mon_fichier.json
+- input/mon_fichier.xml
+
+Le DAG détecte automatiquement le format puis convertit le fichier en CSV avant de déclencher le pipeline principal.

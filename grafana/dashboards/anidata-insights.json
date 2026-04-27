@@ -1,0 +1,410 @@
+{
+  "annotations": { "list": [] },
+  "editable": true,
+  "fiscalYearStartMonth": 0,
+  "graphTooltip": 0,
+  "id": null,
+  "links": [],
+  "panels": [
+    {
+      "datasource": { "type": "datasource", "uid": "-- Mixed --" },
+      "gridPos": { "h": 4, "w": 24, "x": 0, "y": 0 },
+      "id": 1,
+      "options": {
+        "code": { "language": "plaintext", "showLineNumbers": false },
+        "content": "# AniData Lab — Dashboard d'analyse\n\nLecture conseillee :\n1. Vue globale du catalogue\n2. Structure des animes\n3. Qualite, classement et engagement\n\nToutes les visualisations lisent l'index `anime_final` depuis Elasticsearch.",
+        "mode": "markdown"
+      },
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": { "type": "datasource", "uid": "-- Mixed --" },
+      "gridPos": { "h": 2, "w": 24, "x": 0, "y": 4 },
+      "id": 2,
+      "options": {
+        "code": { "language": "plaintext", "showLineNumbers": false },
+        "content": "## Etape 1 — Vue globale",
+        "mode": "markdown"
+      },
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "green", "value": 10000 }
+            ]
+          }
+        }
+      },
+      "gridPos": { "h": 7, "w": 12, "x": 0, "y": 6 },
+      "id": 3,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "textMode": "auto"
+      },
+      "title": "Total animes indexes",
+      "type": "stat",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "date_histogram", "id": "2", "field": "indexed_at", "settings": { "interval": "auto", "min_doc_count": "0" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "thresholds" },
+          "mappings": [],
+          "thresholds": {
+            "mode": "absolute",
+            "steps": [
+              { "color": "red", "value": null },
+              { "color": "yellow", "value": 6.0 },
+              { "color": "green", "value": 7.0 }
+            ]
+          }
+        }
+      },
+      "gridPos": { "h": 7, "w": 12, "x": 12, "y": 6 },
+      "id": 4,
+      "options": {
+        "colorMode": "background",
+        "graphMode": "none",
+        "justifyMode": "center",
+        "orientation": "auto",
+        "reduceOptions": { "calcs": ["lastNotNull"], "fields": "", "values": false },
+        "textMode": "value"
+      },
+      "title": "Score moyen global",
+      "type": "stat",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "avg", "id": "1", "field": "score" }],
+          "bucketAggs": [{ "type": "date_histogram", "id": "2", "field": "indexed_at", "settings": { "interval": "auto", "min_doc_count": "0" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "datasource", "uid": "-- Mixed --" },
+      "gridPos": { "h": 2, "w": 24, "x": 0, "y": 13 },
+      "id": 5,
+      "options": {
+        "code": { "language": "plaintext", "showLineNumbers": false },
+        "content": "## Etape 2 — Structure du catalogue",
+        "mode": "markdown"
+      },
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 75,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 10, "w": 12, "x": 0, "y": 15 },
+      "id": 6,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Repartition par type",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "type", "settings": { "size": "10", "order": "desc", "orderBy": "_count" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 75,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 10, "w": 12, "x": 12, "y": 15 },
+      "id": 7,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Repartition par categorie de score",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "score_category", "settings": { "size": "10", "order": "desc", "orderBy": "_count" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 10, "w": 12, "x": 0, "y": 25 },
+      "id": 8,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Top 10 genres principaux",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "main_genre", "settings": { "size": "10", "order": "desc", "orderBy": "_count" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 10, "w": 12, "x": 12, "y": 25 },
+      "id": 9,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Top 10 studios principaux",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "main_studio", "settings": { "size": "10", "order": "desc", "orderBy": "_count" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 10, "w": 24, "x": 0, "y": 35 },
+      "id": 10,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "vertical",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Catalogue par decennie",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "count", "id": "1" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "decade", "settings": { "size": "20", "order": "asc", "orderBy": "_key" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "datasource", "uid": "-- Mixed --" },
+      "gridPos": { "h": 2, "w": 24, "x": 0, "y": 45 },
+      "id": 11,
+      "options": {
+        "code": { "language": "plaintext", "showLineNumbers": false },
+        "content": "## Etape 3 — Classement et performance",
+        "mode": "markdown"
+      },
+      "title": "",
+      "transparent": true,
+      "type": "text"
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 12, "w": 12, "x": 0, "y": 47 },
+      "id": 12,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Score moyen par type",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "avg", "id": "1", "field": "score" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "type", "settings": { "size": "10", "order": "desc", "orderBy": "1" } }],
+          "query": "*",
+          "refId": "A"
+        }
+      ]
+    },
+    {
+      "datasource": { "type": "elasticsearch", "uid": "elasticsearch-anime" },
+      "fieldConfig": {
+        "defaults": {
+          "color": { "mode": "palette-classic" },
+          "custom": {
+            "axisBorderShow": false,
+            "axisLabel": "",
+            "fillOpacity": 80,
+            "gradientMode": "none",
+            "lineWidth": 1,
+            "scaleDistribution": { "type": "linear" }
+          },
+          "mappings": []
+        }
+      },
+      "gridPos": { "h": 12, "w": 12, "x": 12, "y": 47 },
+      "id": 13,
+      "options": {
+        "barRadius": 0.05,
+        "barWidth": 0.8,
+        "groupWidth": 0.7,
+        "legend": { "displayMode": "hidden", "placement": "bottom" },
+        "orientation": "horizontal",
+        "tooltip": { "mode": "single" }
+      },
+      "title": "Meilleurs animes par decennie",
+      "type": "table",
+      "targets": [
+        {
+          "datasource": { "type": "elasticsearch" },
+          "metrics": [{ "type": "avg", "id": "1", "field": "score" }],
+          "bucketAggs": [{ "type": "terms", "id": "2", "field": "best_of_decade_label", "settings": { "size": "20", "order": "asc", "orderBy": "_key" } }],
+          "query": "is_best_of_decade:true",
+          "refId": "A"
+        }
+      ]
+    }
+  ],
+  "schemaVersion": 39,
+  "tags": ["anidata", "anime", "insights"],
+  "templating": { "list": [] },
+  "time": { "from": "now-100y", "to": "now" },
+  "title": "AniData Lab — Insights Anime",
+  "uid": "anidata-insights",
+  "version": 2
+}
