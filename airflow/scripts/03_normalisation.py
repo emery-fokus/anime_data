@@ -37,8 +37,13 @@ def run_normalisation(index_name="anime"):
     GOLD_FILE = OUTPUT_DIR / "anime_gold.csv"
 
     class C:
-        H = "\033[95m"; B = "\033[94m"; G = "\033[92m"
-        W = "\033[93m"; F = "\033[91m"; BOLD = "\033[1m"; END = "\033[0m"
+        H = "\033[95m"
+        B = "\033[94m"
+        G = "\033[92m"
+        W = "\033[93m"
+        F = "\033[91m"
+        BOLD = "\033[1m"
+        END = "\033[0m"
 
     def titre(t):
         print(f"\n{C.BOLD}{C.H}{'='*60}\n  {t}\n{'='*60}{C.END}\n")

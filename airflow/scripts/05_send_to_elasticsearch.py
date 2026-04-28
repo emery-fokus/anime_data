@@ -52,9 +52,14 @@ def run_indexation(index_name="anime"):
     es_base._COMPAT_MIMETYPE_SUB = "application/vnd.elasticsearch+\\g<1>; compatible-with=8"
 
     class C:
-        H = "\033[95m"; B = "\033[94m"; G = "\033[92m"
-        W = "\033[93m"; F = "\033[91m"; BOLD = "\033[1m"
-        CYAN = "\033[96m"; END = "\033[0m"
+        H = "\033[95m"
+        B = "\033[94m"
+        G = "\033[92m"
+        W = "\033[93m"
+        F = "\033[91m"
+        BOLD = "\033[1m"
+        CYAN = "\033[96m"
+        END = "\033[0m"
 
     def titre(t):
         print(f"\n{C.BOLD}{C.H}{'='*60}\n  {t}\n{'='*60}{C.END}\n")

@@ -37,9 +37,14 @@ INPUT_FILE = os.path.join("output", "anime_gold.json")
 BULK_CHUNK_SIZE = 500
 
 class C:
-    H = "\033[95m"; B = "\033[94m"; G = "\033[92m"
-    W = "\033[93m"; F = "\033[91m"; BOLD = "\033[1m"
-    CYAN = "\033[96m"; END = "\033[0m"
+    H = "\033[95m"
+    B = "\033[94m"
+    G = "\033[92m"
+    W = "\033[93m"
+    F = "\033[91m"
+    BOLD = "\033[1m"
+    CYAN = "\033[96m"
+    END = "\033[0m"
 
 def titre(t):
     print(f"\n{C.BOLD}{C.H}{'='*60}\n  {t}\n{'='*60}{C.END}\n")
