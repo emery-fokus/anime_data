@@ -1,0 +1,26 @@
+[33maf90e98[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{0}: reset: moving to af90e98
+[33m07cfb04[m HEAD@{1}: commit: restoration: remise en place des dossiers scraper et sauvegardes
+[33m088a44a[m HEAD@{2}: commit: ci: validation finale des tests Ruff
+[33mf11642c[m HEAD@{3}: commit: ci: exclusion de mock-site et assouplissement des regles ruff
+[33m944e029[m HEAD@{4}: commit: ci: exclusion totale des dossiers hors airflow
+[33md79d3b3[m HEAD@{5}: commit: ci: configuration de Ruff pour ignorer les dossiers de brouillon
+[33m9288c1c[m HEAD@{6}: commit: ci: ajout des fichiers de config au bon endroit
+[33m3548f26[m HEAD@{7}: commit: fix: suppression réelle des doublons pour GitHub
+[33m79f754a[m HEAD@{8}: commit: style: correction des erreurs de linter Ruff
+[33m25e98ad[m HEAD@{9}: commit (amend): feat: scraper et DAG fonctionnels sur Airflow Docker
+[33mdc5fd44[m HEAD@{10}: commit (amend): feat: scraper et DAG fonctionnels sur Airflow Docker
+[33mfb5a248[m HEAD@{11}: commit: feat: scraper et DAG fonctionnels sur Airflow Docker
+[33m4754eb5[m HEAD@{12}: commit: Add DAG 03: scraper for mock-site
+[33m406dfb1[m HEAD@{13}: commit: Correction du chemin dossier build
+[33m43017a5[m HEAD@{14}: commit: Ajout du job de build et des artefacts
+[33maf90e98[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m HEAD@{15}: commit: Add beautifulsoup4 and requests to CI test dependencies
+[33m12025c7[m HEAD@{16}: commit: Trigger CI re-run
+[33me43b75a[m HEAD@{17}: commit: Fix E702: multiple statements on one line
+[33m327442a[m HEAD@{18}: commit: Fix lint errors with ruff
+[33m1f33cca[m HEAD@{19}: commit: Installation de la CI au bon emplacement - Séance 2
+[33m738e7aa[m HEAD@{20}: pull: Fast-forward
+[33mcb88a43[m HEAD@{21}: checkout: moving from test to main
+[33m6eba729[m[33m ([m[1;31morigin/test[m[33m, [m[1;32mtest[m[33m)[m HEAD@{22}: commit: Ajout du scraper et du mock-site sur la branche test
+[33mcb88a43[m HEAD@{23}: checkout: moving from main to test
+[33mcb88a43[m HEAD@{24}: Branch: renamed refs/heads/master to refs/heads/main
+[33mcb88a43[m HEAD@{26}: commit (initial): premier commit

@@ -1,4 +1,59 @@
-﻿name: CI Séance 2
+﻿# name: CI Séance 2
+
+# on:
+#   push:
+#     branches: [main, principal]
+#   pull_request:
+#     branches: [main, principal]
+
+# jobs:
+#   lint:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: "3.10"
+#           cache: pip
+#       - run: pip install ruff
+#       - run: ruff check .
+
+#   tests:
+#     needs: lint
+#     runs-on: ubuntu-latest
+#     strategy:
+#       matrix:
+#         python-version: ["3.10", "3.11"]
+#     steps:
+#       - uses: actions/checkout@v4
+#       - uses: actions/setup-python@v5
+#         with:
+#           python-version: ${{ matrix.python-version }}
+#           cache: pip
+#       - run: pip install pytest beautifulsoup4 requests
+#       - run: pytest
+
+# # --- AJOUTE TA LOGIQUE ICI ---
+#   build:
+#     needs: tests
+#     runs-on: ubuntu-latest
+#     if: success()
+#     steps:
+#       - uses: actions/checkout@v4
+
+#       - name: Préparer le code
+#         run: |
+#           echo "✅ Tests OK → build du projet"
+#           mkdir -p dist
+#           cp -r anidata_scraper dist/
+
+#       - name: Upload artifact
+#         uses: actions/upload-artifact@v4
+#         with:
+#           name: project-build
+#           path: dist/
+
+name: CI Séance 2
 
 on:
   push:
@@ -32,3 +87,22 @@ jobs:
           cache: pip
       - run: pip install pytest beautifulsoup4 requests
       - run: pytest
+
+  build:
+    needs: tests
+    runs-on: ubuntu-latest
+    if: success()
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Préparer le code
+        run: |
+          echo "✅ Tests OK → build du projet"
+          mkdir -p dist
+          cp -r anidata-scraper dist/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: project-build
+          path: dist/
